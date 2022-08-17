@@ -62,6 +62,34 @@ public class crud {
     	   System.out.println(e);
        }
     }
+	   public static void delete(String name_del) {
+        try {
+     		Class.forName("com.mysql.cj.jdbc.Driver"); 
+     		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Personne","root","");
+     		PreparedStatement st = con.prepareStatement("delete from personne where Name = ?");
+     		st.setString(1,name_del);
+     		st.executeUpdate();
+     		System.out.println("deleting Of data Effected");
+        }catch(Exception e){
+     	   System.out.println(e);
+        }
+     }
+    public static void update(crud new_data,String name_up) {
+        try {
+     		Class.forName("com.mysql.cj.jdbc.Driver"); 
+     		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Personne","root","");
+     		PreparedStatement st = con.prepareStatement("updtae personne set Name =? , LastName =? , Phone=?,Age=?  where Name = name_up");
+     		st.setString(1,new_data.Name);
+     		st.setString(2,new_data.LastName);
+     		st.setString(3,new_data.Phone);
+     		st.setInt(4,new_data.Age);
+     		st.setString(1,name_up);
+     		st.executeUpdate();
+     		System.out.println("updating of  Of data Effected");
+        }catch(Exception e){
+     	   System.out.println(e);
+        }
+     }
    
 		
 	}

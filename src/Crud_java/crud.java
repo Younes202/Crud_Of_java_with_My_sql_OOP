@@ -90,7 +90,19 @@ public class crud {
      	   System.out.println(e);
         }
      }
-   
+    public static void main(String[] args)  {
+    	Scanner input = new Scanner(System.in); 
+
+    	int i;
+    	    do{
+    		System.out.println("----- -------------- Helllo in this  Programme --------- ----------");
+    		System.out.println("----- ---------- Insert in database a personne --------- ---- (1) -");
+    		System.out.println("----- ----------  Display all personnes in db  --------- ---- (2) -");
+    		System.out.println("----- ----------- update a personne in db --------- --------- (3) -");
+    		System.out.println("----- ----------- Delete  a personne  in db --------- ------- (4) -");
+    		System.out.println("----- ---------- Quite this Programme  --------- ------------ (0) -");
+            i = input.nextInt();
+    		}while(i!=0);
 		
 	}
 

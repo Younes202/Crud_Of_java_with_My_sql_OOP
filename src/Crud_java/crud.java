@@ -116,8 +116,10 @@ public class crud {
 				    int Age = input.nextInt();
 				    crud pr = new crud (Name,LastN,Phone,Age);
 				    Insert(pr);
+				    break;
 			    case 2 :
 				    Display();
+				    break;
 			    case 3 : 
 				    Systme.out.println("Put The name of personne who would update ");
 				    Stirng nserch = input.nextLine();
@@ -130,7 +132,13 @@ public class crud {
 				    System.out.println("Put The new Age ");
 				    int nAge= input.nextInt();
 				    crud pr = new crud (ne,nl,np,nAge);
-				   Update(pr,nserch);
+				    Update(pr,nserch);
+				    break;
+			    case 4 :
+				    Systme.out.println("Put The name of personne who would deleting ");
+				    String nad = input.nextLine();
+				    Delete(nad);
+				    break;
 		    }
     		}while(i!=0);
 		

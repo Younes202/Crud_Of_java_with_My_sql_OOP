@@ -139,9 +139,10 @@ public class crud {
 				    String nad = input.nextLine();
 				    Delete(nad);
 				    break;
+			    	    
 		    }
     		}while(i!=0);
 		
 	}
-
+}
 
